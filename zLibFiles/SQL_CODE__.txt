@@ -1,0 +1,24 @@
+
+CREATE DATABASE diu_test ; 
+
+CREATE TABLE users (
+	uID int not null primary key auto_increment ,
+	uName varchar(15) not null , 
+	uEmail varchar(15) not null , 
+	uUserName varchar(10) not null , 
+	uPass varchar(15) not null , 
+	uAge int,
+	uContact varchar(15) ,
+	uGender VARCHAR(11) , 
+	uHight varchar(10) , 
+	uAddress varchar(25)
+);
+
+INSERT INTO users ( uName , uEmail, uUserName, uPass, uAge, uContact, uGender, uHight, uAddress) VALUES 
+("taiseen khan" , "seen@gmail.com" , "seen" , "1234" , 26 , "01717416412" , "Male" , "5'5" , "Dhaka") ,
+("tanzimul hasib" , "hasib@gmail.com" , "hasib" , "abcd" , 24 , "01717888888" , "Male" , "5'4" , "Rajshahi") ;
+
+
+UPDATE users SET uPass = "1234567" WHERE uID = 1 ;
+
+ALTER TABLE users CHANGE uGender uGender VARCHAR(11) ;
